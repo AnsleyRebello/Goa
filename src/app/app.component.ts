@@ -1,12 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TodosComponent } from './MyComponents/todos/todos.component';
 
+// kaunse tag ka ye component hai? --> <app-root>
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [TodosComponent],
+  templateUrl: './app.component.html',  // kaunsi template change karni hai aapko
+  styleUrl: './app.component.css',
 })
+
+// export = public 
 export class AppComponent {
+
+  // variable
   title = 'cwh-todo-list';
+
+  
+  // created when object created
+  constructor() 
+  {
+  }
 }
+
+// ( without page reload ).....changes get reflected

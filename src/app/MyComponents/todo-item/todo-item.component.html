@@ -1,0 +1,30 @@
+<div class="my-3">
+<h5>{{ todo.title }}</h5>
+<p>{{todo.desc}}</p>
+<button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
+</div>
+
+
+
+
+<!-- how this will be rendered in the browser -->
+<!-- From Loop Iteration 1: todo = {sno:1, title:'title1', ...}
+<div>
+    <div>
+        <p>title1</p>
+    </div>
+</div> -->
+
+<!-- From Loop Iteration 2: todo = {sno:2, title:'title2', ...} -->
+<!-- <div>
+    <div>
+        <p>title2</p>
+    </div>
+</div> -->
+
+<!-- From Loop Iteration 3: todo = {sno:3, title:'title3', ...} -->
+<!-- <div>
+    <div>
+        <p>title3</p>
+    </div>
+</div> -->

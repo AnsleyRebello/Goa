@@ -1,0 +1,35 @@
+<app-add-todo 
+
+(todoAdd)="addTodo($event)"
+>
+
+</app-add-todo>
+
+<h4>Your Todos</h4>
+
+<div *ngIf="todos.length === 0; else elseBlock">No Todos to Display</div>
+
+<ng-template #elseBlock>
+
+<!-- This is the child component’s selector —
+means we’re using the child (TodoItemComponent) inside the parent’s HTML. -->
+<div *ngFor="let todo of todos">
+    <!-- take each item from the todo Array and put it in app-todo-item -->
+
+    <!-- [todo]="todo" means provide the todo to the child com-->
+    <app-todo-item 
+    
+    [todo]="todo" 
+    
+    (todoDelete)="deleteTodo($event)"
+    >
+
+    </app-todo-item>
+    <!-- The round brackets () mean you’re listening to an event from the child. -->
+</div>
+
+</ng-template>
+
+<app-footer-todo></app-footer-todo>
+
+<!-- here the connection is taking place of the todos.component.ts and the todo-item.component.ts -->
