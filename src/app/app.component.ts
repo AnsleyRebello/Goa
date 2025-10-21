@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { TodosComponent } from './MyComponents/todos/todos.component';
+import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
 
 // kaunse tag ka ye component hai? --> <app-root>
 @Component({
   selector: 'app-root',
-  imports: [TodosComponent],
+  imports: [RouterOutlet, RouterLinkWithHref],
   templateUrl: './app.component.html',  // kaunsi template change karni hai aapko
   styleUrl: './app.component.css',
 })

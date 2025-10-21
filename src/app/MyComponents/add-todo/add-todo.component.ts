@@ -9,8 +9,8 @@ import { Todo } from '../../Todo';
   styleUrl: './add-todo.component.css'
 })
 export class AddTodoComponent {
-  title!: string
-  desc!: string
+  title = ""  //empty
+  desc = "" 
 
   // The add-todo will scream to the todos.component.ts 
   @Output() todoAdd: EventEmitter<Todo> = new EventEmitter()
@@ -21,7 +21,7 @@ export class AddTodoComponent {
   {
     const todo = 
     {
-      sno: 8,
+      sno: 0,
       title : this.title,
       desc: this.desc,
       active: true

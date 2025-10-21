@@ -1,11 +1,19 @@
 <div class="my-3">
-<h5>{{ todo.title }}</h5>
-<p>{{todo.desc}}</p>
-<button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
+  <h5>{{ todo.title }}</h5>
+  <p>{{ todo.desc }}</p>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="flexCheckDefault"
+    />
+    <label class="form-check-label" for="flexCheckDefault" (click)="onCheckBoxClick(todo)">
+      Mark As Done
+    </label>
+  </div>
+  <button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
 </div>
-
-
-
 
 <!-- how this will be rendered in the browser -->
 <!-- From Loop Iteration 1: todo = {sno:1, title:'title1', ...}
